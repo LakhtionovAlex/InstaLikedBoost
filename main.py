@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as ec
 
 driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
-
+# Pass your username and password to variables
 try:
     driver.get('https://instagram.com')
     time.sleep(2)
@@ -33,6 +33,7 @@ try:
     onpush = driver.execute_script("document.getElementsByClassName('_a9-- _a9_1')[0].click()")
     time.sleep(8)
 
+# Choose the right hashtags for you
     try:
         driver.get(f"https://www.instagram.com/explore/tags/{hashtag}")
         time.sleep(8)
